@@ -32,7 +32,7 @@ export default class CustomCategoryBanner extends Component {
   }
 
   get categorySlug() {
-    return this.generateSlug(this.category.name);
+    return this.category.slug || this.generateSlug(this.category.name);
   }
 
   generateSlug(name) {
@@ -45,4 +45,3 @@ export default class CustomCategoryBanner extends Component {
       .replace(/-+$/, '');      // Trim hyphens from the end
   }
 }
-
